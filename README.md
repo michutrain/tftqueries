@@ -1,2 +1,2 @@
-# tftqueries
-CPSC312 Prolog Project
+# TFTQueries
+CPSC312 2019 Prolog Project
