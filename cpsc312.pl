@@ -42,7 +42,7 @@ start(_) :-
     flush_output(current_output),
     readln([Head|_]),
     assert(level(Head)),
-    write("For a simple question: q(Ans) or complex question: q2(Ans)").
+    write("For a simple question, input: q(Ans) or complex question: q2(Ans)").
     
 :- initialization(start(_)).
 
@@ -102,14 +102,14 @@ adjectives(L,L,_).
 % a relation (verb or preposition) followed by a noun_phrase or
 % 'that' followed by a relation then a noun_phrase or
 % nothing 
-mp(L0,L1,Object) :-
-    noun_phrase(L0,L1,Object).
-mp([that|L0],L1,Object) :-
-    noun_phrase(L0,L1,Object).
-mp([with|L0],L1,Object) :-
-    noun_phrase(L0,L1,Object).  
-mp([for|L0],L1,Object) :-
-    noun_phrase(L0,L1,Object).  
+mp(L0,L1,Entity) :-
+    noun_phrase(L0,L1,Entity).
+mp([that|L0],L1,Entity) :-
+    noun_phrase(L0,L1,Entity).
+mp([with|L0],L1,Entity) :-
+    noun_phrase(L0,L1,Entity).  
+mp([for|L0],L1,Entity) :-
+    noun_phrase(L0,L1,Entity).  
 mp(L,L,_).
 
 % ============================================= DICTIONARY =============================================
